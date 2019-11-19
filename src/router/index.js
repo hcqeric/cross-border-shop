@@ -1,40 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import routes from './routes'
 
 Vue.use(Router);
 
-const routes = [
-  {
-    path: '*',
-    redirect: '/goods'
-  },
-  {
-    name: 'user',
-    component: () => import('../views/user'),
-    meta: {
-      title: '会员中心'
-    }
-  },
-  {
-    name: 'cart',
-    component: () => import('../views/cart'),
-    meta: {
-      title: '购物车'
-    }
-  },
-  {
-    name: 'goods',
-    component: () => import('../views/goods'),
-    meta: {
-      title: '商品详情'
-    }
-  }
-];
-
-// add route path
-routes.forEach(route => {
-  route.path = route.path || '/' + (route.name || '');
-});
 
 const router = new Router({ routes });
 
