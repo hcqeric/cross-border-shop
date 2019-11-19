@@ -3,23 +3,24 @@ import App from './App.vue'
 import { router } from './router'
 import store from './store'
 import 'amfe-flexible'
+import Vant from 'vant'
+import 'vant/lib/index.css';
 import VueI18n from 'vue-i18n'
 import messages from "./utils/language";
 
-Vue.use(VueI18n)
+Vue.use(VueI18n);
 
 // Create VueI18n instance with options
 const i18n = new VueI18n({
-  locale: 'en', // set locale
+  locale: 'zh', // set locale
   messages, // set locale messages
-})
+});
+//
+Vue.use(Vant, {
+  i18n: (key, value) => i18n.t(key, value)
+});
 
-
-// Vue.use(Element, {
-//   i18n: (key, value) => i18n.t(key, value)
-// })
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,

@@ -5,8 +5,9 @@
 </template>
 
 <style lang="less">
-  body {
-    font-size: 16px;
+  #app {
+    font-size: 14px;
+    color: #323233;
     background-color: #f8f8f8;
     -webkit-font-smoothing: antialiased;
   }

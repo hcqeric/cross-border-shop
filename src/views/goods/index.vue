@@ -29,6 +29,7 @@
 
     <van-cell-group class="goods-cell-group">
       <van-cell title="查看商品详情" is-link @click="sorry" />
+      <div class="test">{{$t('hello')}}</div>
     </van-cell-group>
 
     <van-goods-action>
@@ -44,38 +45,15 @@
       <van-goods-action-button type="danger" @click="sorry">
         立即购买
       </van-goods-action-button>
+
     </van-goods-action>
   </div>
 </template>
 
 <script>
-import {
-  Tag,
-  Col,
-  Icon,
-  Cell,
-  CellGroup,
-  Swipe,
-  Toast,
-  SwipeItem,
-  GoodsAction,
-  GoodsActionIcon,
-  GoodsActionButton
-} from 'vant';
+import {Toast} from 'vant';
 
 export default {
-  components: {
-    [Tag.name]: Tag,
-    [Col.name]: Col,
-    [Icon.name]: Icon,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Swipe.name]: Swipe,
-    [SwipeItem.name]: SwipeItem,
-    [GoodsAction.name]: GoodsAction,
-    [GoodsActionIcon.name]: GoodsActionIcon,
-    [GoodsActionButton.name]: GoodsActionButton
-  },
 
   data() {
     return {
@@ -109,6 +87,9 @@ export default {
 </script>
 
 <style lang="less">
+  .test{
+    height: 75px;
+  }
 .goods {
   padding-bottom: 50px;
 
