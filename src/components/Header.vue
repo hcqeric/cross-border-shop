@@ -1,13 +1,13 @@
 <template>
     <div class="cbs-header">
-        <div class="home-icon">
+        <div class="cbs-header-home">
             <img src="../assets/home@2x.png" alt="">
         </div>
-        <div class="right-action">
-            <div>
+        <div class="cbs-header-right">
+            <div class="cbs-header-cart">
                 <img src="../assets/cart@2x.png" alt="">
             </div>
-            <div>
+            <div class="cbs-header-more">
                 <img src="../assets/more@2x.png" alt="">
             </div>
         </div>
