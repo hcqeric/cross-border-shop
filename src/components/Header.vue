@@ -1,6 +1,11 @@
 <template>
     <div class="cbs-header">
+        <div class="home-icon">
 
+        </div>
+        <div class="right-action">
+
+        </div>
     </div>
 </template>
 
