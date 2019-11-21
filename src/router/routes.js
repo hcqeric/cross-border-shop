@@ -1,11 +1,12 @@
 const UserPage = () => import('../views/user');
 const CartPage = () => import('../views/cart');
 const GoodsPage = () => import('../views/goods');
+const LoginPage = () => import('../views/login');
 
 export default [
   {
     path: '/',
-    redirect: '/goods'
+    redirect: '/login'
   },
   {
     path: '/user',
@@ -29,6 +30,14 @@ export default [
     component: GoodsPage,
     meta: {
       title: '商品详情'
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginPage,
+    meta: {
+      title: '登录'
     }
   }
 ];
