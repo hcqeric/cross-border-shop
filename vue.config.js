@@ -14,6 +14,12 @@ module.exports = {
             propList: ['*']
           })
         ]
+      },
+      less: {
+        // 修改 vant 默认主题色
+        modifyVars: {
+          green: '#000000'
+        }
       }
     }
   }

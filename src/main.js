@@ -7,6 +7,8 @@ import Vant from 'vant'
 import 'vant/lib/index.css';
 import VueI18n from 'vue-i18n'
 import messages from "./utils/language";
+import '@/styles/normalize-V5.css'; // 与iview同款
+import './styles/common.less'
 
 Vue.use(VueI18n);
 
