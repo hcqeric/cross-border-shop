@@ -92,7 +92,7 @@ export default {
         price: 2680,
         express: '免运费',
         remain: 19,
-        type: 2, // 1: 普通， 2: 砍价
+        type: 1, // 1: 普通， 2: 砍价
         thumb: [
           'https://img.yzcdn.cn/public_files/2017/10/24/e5a5a02309a41f9f5def56684808d9ae.jpeg',
           'https://img.yzcdn.cn/public_files/2017/10/24/1791ba14088f9c2be8c610d0a6cc0f93.jpeg'
@@ -121,11 +121,11 @@ export default {
     clickTab(name) {
       console.log(name)
       if (name === 1) {
-        window.scrollTo(0, document.querySelector('#info').offsetTop);
+        window.scrollTo(0, 0);
       } else if (name === 2) {
-        window.scrollTo(0, document.querySelector('#comment').offsetTop);
+        window.scrollTo(0, document.querySelector('#comment').offsetTop - 90);
       } else {
-        window.scrollTo(0, document.querySelector('#detail').offsetTop);
+        window.scrollTo(0, document.querySelector('#detail').offsetTop - 90);
       }
     },
     sorry() {
@@ -239,9 +239,15 @@ export default {
       }
     }
   }
+  .van-goods-action-button--first.van-goods-action-button--last{
+    font-size: 14px;
+    background: #000000;
+    color: #ffffff;
+  }
   .van-goods-action-button--last{
     margin: 0;
     border-radius: 0;
+    font-size: 12px;
   }
   .van-goods-action-button--first{
     margin: 0;
