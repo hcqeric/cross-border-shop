@@ -17,7 +17,7 @@ const i18n = new VueI18n({
   locale: 'zh', // set locale
   messages, // set locale messages
 });
-//
+
 Vue.use(Vant, {
   i18n: (key, value) => i18n.t(key, value)
 });

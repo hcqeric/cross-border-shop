@@ -18,7 +18,7 @@ export default {
   #app {
     font-family: "Microsoft YaHei";
     font-size: 14px;
-    color: #323233;
+    color: #000000;
     background-color: #f8f8f8;
     -webkit-font-smoothing: antialiased;
   }

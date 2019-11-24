@@ -1,5 +1,5 @@
 export default {
-  hello: 'hi',
+  hello: 'Hi,',
   login: 'Sign In',
   email: 'Email'
 }

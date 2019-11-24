@@ -6,20 +6,24 @@
                 <van-field
                     v-model="username"
                     clearable
-                    label="邮箱地址"
-                    placeholder="输入邮箱地址"
+                    :label="$t('email')"
+                    :placeholder="$t('emailTip')"
                 />
             </div>
-            <div class="login-form-item van-hairline--surround mt18">
+            <div class="login-form-item van-hairline--surround mt18 mb18">
                 <van-field
                     v-model="password"
                     type="password"
-                    label="密码"
-                    placeholder="输入登录密码"
+                    :label="$t('password')"
+                    :placeholder="$t('passwordTip')"
                 />
             </div>
+            <div class="login-relate">
+                <span class="relate-reg" @click="$router.push('/register')">{{$t('register')}}</span>
+                <span @click="$router.push('/forget')">{{$t('forgetPsd')}}</span>
+            </div>
             <div class="login-btn">
-                <van-button style="width: 100%" round type="primary">登录</van-button>
+                <van-button style="width: 100%" round type="primary">{{$t('login')}}</van-button>
             </div>
         </div>
     </div>
@@ -27,7 +31,13 @@
 
 <script>
   export default {
-    name: "index"
+    name: "index",
+    data(){
+        return{
+            username:'',
+            password: ''
+        }
+    }
   }
 </script>
 
@@ -45,11 +55,20 @@
         }
         /*/deep/ .*/
         .login-form-item{
-            padding: 5px 0;
+            padding: 2px 0;
         }
         .login-form-item.van-hairline--surround:after{
             border-color: #D2D2D2;
             border-radius: 6px;
+        }
+        .login-relate{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 57px;
+            font-size: 15px;
+            .relate-reg{
+                padding-left: 8px;
+            }
         }
     }
 }
