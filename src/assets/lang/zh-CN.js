@@ -36,5 +36,9 @@ export default {
   priceMinAt: '低至',
   buyAtBeginPrice: '原价购买',
   moreComment: '更多评价',
-  goodsDetail: '商品详情'
+  goodsDetail: '商品详情',
+  paysucc: '提交成功',
+  packageComeQuick: '包裹很快与您相见~',
+  toOrder: '查看订单',
+  toHome: '前往主页',
 }

@@ -6,6 +6,7 @@ const ForgetPage = () => import('../views/login/forget');
 const RegisterPage = () => import('../views/login/register');
 const AccountPage = () => import('../views/login/account');
 const HomePage = () => import('../views/home/index');
+const PaySucc = () => import('../views/payment/paysucc');
 
 
 export default [
@@ -78,6 +79,14 @@ export default [
     component: HomePage,
     meta: {
       title: '首页'
+    }
+  },
+  {
+    path: '/paysucc',
+    name: 'paysucc',
+    component: PaySucc,
+    meta: {
+      title: ''
     }
   }
 ];
