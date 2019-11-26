@@ -41,4 +41,6 @@ export default {
   packageComeQuick: '包裹很快与您相见~',
   toOrder: '查看订单',
   toHome: '前往主页',
+  cutRecord: '砍价记录',
+  cutOrder: '砍成订单',
 }

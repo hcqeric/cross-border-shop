@@ -7,6 +7,8 @@ const RegisterPage = () => import('../views/login/register');
 const AccountPage = () => import('../views/login/account');
 const HomePage = () => import('../views/home/index');
 const PaySucc = () => import('../views/payment/paysucc');
+const Bargain = () => import('../views/bargain/index');
+const CutPrice = () => import('../views/bargain/cutprice');
 
 
 export default [
@@ -85,6 +87,22 @@ export default [
     path: '/paysucc',
     name: 'paysucc',
     component: PaySucc,
+    meta: {
+      title: ''
+    }
+  },
+  {
+    path: '/bargain',
+    name: 'bargain',
+    component: Bargain,
+    meta: {
+      title: ''
+    }
+  },
+  {
+    path: '/cutprice',
+    name: 'cutprice',
+    component: CutPrice,
     meta: {
       title: ''
     }
