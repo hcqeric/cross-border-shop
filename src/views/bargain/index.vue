@@ -1,14 +1,22 @@
 <template>
     <div class="bargain">
-        <div class="bargain-cont" style="height:500px">
+        <div class="bargain-cont">
             <div class="bargain-cont-goods" >
-
+                <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
+                <div class="goods-info">
+                    <div>烟酰胺护肤套装美白补水保湿保烟酰胺护肤套装美白补水保湿保</div>
+                    <div>
+                        <p><del>{{$t('dollar')}}189</del></p>
+                        <p>{{$t('bargainTo')}}<span>{{$t('dollar')}}179.00</span></p>
+                    </div>
+                </div>
             </div>
             <div class="bargain-cont-countdown">
+                23:00:00{{$t('bargainLeftPrice')}}
             </div>
             <div class="bargain-cont-actions">
-                <van-button style="width: 80px;" type="primary" size="small"  plain @click="changeLogin(2)">{{$t('registerMember')}}</van-button>
-                <van-button style="width: 80px;" type="primary" size="small"  plain @click="changeLogin(2)">{{$t('registerMember')}}</van-button>
+                <van-button style="width: 278px;" round type="primary" @click="changeLogin(2)">{{$t('inviteFriendCanCut')}}{{$t('dollar')}}98.00</van-button>
+                <van-button style="width: 278px;" round type="primary" plain @click="changeLogin(2)">{{$t('buyAtCurrentPrice')}}</van-button>
             </div>
         </div>
         <div class="bargain-footer">
@@ -20,17 +28,24 @@
                         finished-text="没有更多了"
                         @load="onLoad"
                     >
-                        <van-cell
+                        <bargain-item
                             v-for="item in list"
                             :key="item"
-                            :title="item"
                         />
                     </van-list>
                 </van-tab>
                 <van-tab :title="$t('cutOrder')" :name="2">
-                    <div style="height: 500px">
-                        aaa
-                    </div>
+                    <van-list
+                        v-model="loading"
+                        :finished="finished"
+                        finished-text="没有更多了"
+                        @load="onLoad"
+                    >
+                        <bargain-item
+                            v-for="item in list"
+                            :key="item"
+                        />
+                    </van-list>
                 </van-tab>
             </van-tabs>
         </div>
@@ -38,8 +53,12 @@
 </template>
 
 <script>
+    import BargainItem from "../../components/bargain/BargainItem";
   export default {
     name: "index",
+      components:{
+          BargainItem
+      },
     data(){
         return{
             countDownTime: '',
@@ -86,26 +105,70 @@
     padding-top: 45PX;
     &-cont{
         background: #ffffff;
-        padding: 12px;
-        &-search{
-            padding-bottom: 5px;
-            .van-search__content{
-                background-color: #ffffff;
+        padding: 12px 12px 32px;
+        &-goods{
+            background: #F7F7F7;
+            height: 116px;
+            box-sizing: border-box;
+            padding: 15px 11px 0;
+            display: flex;
+            img{
+                height: 80px;
+                width: 80px;
+                margin-right: 12px;
+                flex-shrink: 0;
+            }
+            .goods-info{
+                height: 80px;
+                flex: 1;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 0;
+                color: #000000;
+                div{
+                    line-height: 20px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-size: 15px;
+                }
+                p {
+                    margin-top: 4px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 16px;
+                    span{
+                        color: #E94445;
+                        padding-left: 6px;
+                    }
+                }
             }
         }
-        &-cate{
-            margin: 0 10px 10px;
-            overflow: hidden;
-            border-radius: 10px;
-            min-height: 218PX;
-            img{
-                width: 100%;
-
+        &-countdown{
+            color: #969696;
+            font-size: 12px;
+            margin: 30px 0 10px;
+            text-align: center;
+        }
+        &-actions{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .van-button{
+                margin-bottom: 18px;
             }
         }
     }
     &-footer{
         background: #E6E6E6;
+        .van-tabs__wrap.van-hairline--top-bottom:after{
+            border: none;
+        }
+        /deep/ .van-tabs__nav{
+            background: #F7F7F7;
+        }
         &-actions{
             display: flex;
             justify-content: center;

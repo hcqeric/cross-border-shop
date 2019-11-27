@@ -43,4 +43,8 @@ export default {
   toHome: '前往主页',
   cutRecord: '砍价记录',
   cutOrder: '砍成订单',
+  bargainTo: '已砍到',
+  bargainLeftPrice: ' 后将恢复原价，快来砍价吧~',
+  inviteFriendCanCut: '邀请好友可再砍',
+  buyAtCurrentPrice: '以当前价格购买'
 }
