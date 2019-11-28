@@ -46,5 +46,11 @@ export default {
   bargainTo: '已砍到',
   bargainLeftPrice: ' 后将恢复原价，快来砍价吧~',
   inviteFriendCanCut: '邀请好友可再砍',
-  buyAtCurrentPrice: '以当前价格购买'
+  buyAtCurrentPrice: '以当前价格购买',
+  buyAtPrice: '购买价格',
+  cutOff: '砍掉',
+  friendCutPriceTxt: '帮好友砍一刀',
+  iWantIt: '我也想要',
+  cutPriceNum: '您已帮好友成功砍价',
+  goodsRecommend: '商品推荐'
 }

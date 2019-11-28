@@ -7,13 +7,20 @@
         <p class="comment">盖世刀法</p>
       </div>
     </div>
-    <div class="item-right">砍掉￥10.00</div>
+    <div class="item-right" v-if="current === 1">{{$t('cutOff')}}￥10.00</div>
+    <div class="item-right" v-else>{{$t('buyAtPrice')}}￥10.00</div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "BargainItem"
+    name: "BargainItem",
+    props: {
+      current: {
+        default: 1,
+
+      }
+    }
   }
 </script>
 

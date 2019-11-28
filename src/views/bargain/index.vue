@@ -103,6 +103,7 @@
     width: 100vw;
     box-sizing: border-box;
     padding-top: 45PX;
+    background: #f2f2f2;
     &-cont{
         background: #ffffff;
         padding: 12px 12px 32px;
@@ -162,34 +163,11 @@
         }
     }
     &-footer{
-        background: #E6E6E6;
         .van-tabs__wrap.van-hairline--top-bottom:after{
             border: none;
         }
         /deep/ .van-tabs__nav{
             background: #F7F7F7;
-        }
-        &-actions{
-            display: flex;
-            justify-content: center;
-            padding-top: 38px;
-            .van-button{
-                border-radius: 10px;
-            }
-        }
-        .van-divider{
-            color: #000000;
-            border-color: #d2d2d2;
-        }
-        &-contacts{
-            display: flex;
-            justify-content: center;
-            padding-bottom: 16px;
-            img{
-                margin: 0 12px;
-                width: 33px;
-                height: 33px;
-            }
         }
     }
 }

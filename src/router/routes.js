@@ -100,7 +100,7 @@ export default [
     }
   },
   {
-    path: '/cutprice',
+    path: '/cut',
     name: 'cutprice',
     component: CutPrice,
     meta: {
