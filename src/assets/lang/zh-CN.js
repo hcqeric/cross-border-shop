@@ -52,5 +52,16 @@ export default {
   friendCutPriceTxt: '帮好友砍一刀',
   iWantIt: '我也想要',
   cutPriceNum: '您已帮好友成功砍价',
-  goodsRecommend: '商品推荐'
+  goodsRecommend: '商品推荐',
+  bargainPop: {
+    buyNowTipTop: '提交购买后将不能继续砍价',
+    buyNowTipBottomStart: '确定以',
+    buyNowTipBottomEnd: '的价格购买吗？',
+    bottomConfirmTxt: '继续砍价',
+    bottomCancelTxt: '立即购买'
+  },
+  invitePop: {
+    inviteTip: '复制链接给好友，帮忙砍到最低价！',
+    inviteCopy: '复制'
+  }
 }

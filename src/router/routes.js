@@ -1,6 +1,7 @@
 const UserPage = () => import('../views/user');
 const CartPage = () => import('../views/cart');
 const GoodsPage = () => import('../views/goods');
+const GoodsList = () => import('../views/goods/list');
 const LoginPage = () => import('../views/login/index');
 const ForgetPage = () => import('../views/login/forget');
 const RegisterPage = () => import('../views/login/register');
@@ -103,6 +104,14 @@ export default [
     path: '/cut',
     name: 'cutprice',
     component: CutPrice,
+    meta: {
+      title: ''
+    }
+  },
+  {
+    path: '/list',
+    name: 'GoodsList',
+    component: GoodsList,
     meta: {
       title: ''
     }
