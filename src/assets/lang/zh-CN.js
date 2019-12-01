@@ -63,5 +63,35 @@ export default {
   invitePop: {
     inviteTip: '复制链接给好友，帮忙砍到最低价！',
     inviteCopy: '复制'
+  },
+  cartList: {
+    title: '购物车',
+    delete: '删除',
+    totalNum: '共{num}件',
+    settlement: '结算',
+    submitOrder: '提交订单'
+  },
+  settlement: {
+    expressInfo: '收货信息',
+    consignee: '收货人',
+    consigneeHolder: '输入收货人姓名',
+    mobile: '手机号码',
+    mobileHolder: '输入收货人手机号码',
+    province: '省份',
+    provinceHolder: '选择省/州名',
+    city: '城市',
+    cityHolder: '选择城市',
+    address: '详细地址',
+    addressHolder: '输入详细地址',
+    postalCode: '邮政编码',
+    postalCodeHolder: '输入邮政编码',
+    paymentInfo: '付款信息',
+    paymentMethod: '付款方式',
+    cashOnDelivery: '货到付款',
+    paymentArrival: '到付金额',
+    getNow: '立即获取',
+    inputDiscountCode: '填写优惠码',
+    addOfficialMedia: '添加官媒获得5-50元优惠',
+    copyAndAddOfficialMedia: '复制并添加以下任一官媒，获得5-50元优惠'
   }
 }

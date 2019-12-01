@@ -8,6 +8,7 @@ const RegisterPage = () => import('../views/login/register');
 const AccountPage = () => import('../views/login/account');
 const HomePage = () => import('../views/home/index');
 const PaySucc = () => import('../views/payment/paysucc');
+const Settlement = () => import('../views/payment');
 const Bargain = () => import('../views/bargain/index');
 const CutPrice = () => import('../views/bargain/cutprice');
 
@@ -112,6 +113,14 @@ export default [
     path: '/list',
     name: 'GoodsList',
     component: GoodsList,
+    meta: {
+      title: ''
+    }
+  },
+  {
+    path: '/settlement',
+    name: 'Settlement',
+    component: Settlement,
     meta: {
       title: ''
     }
