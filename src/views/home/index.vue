@@ -53,7 +53,12 @@
         }
 
       }
-    }
+    },
+      mounted() {
+        this.$getData('/api/v1/sys/menu/nav', {}, 'GET').then(res=>{
+            console.log(res);
+        })
+      }
   }
 </script>
 
